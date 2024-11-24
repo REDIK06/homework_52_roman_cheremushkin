@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from webapp.models import Task
 
-# Create your views here.
+
+def index_view(request):
+    context = {
+        'tasks': Task.objects.all(),
+    }
+    return render(request, 'index.html', context=context)
