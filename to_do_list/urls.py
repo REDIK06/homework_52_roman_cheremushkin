@@ -18,12 +18,9 @@ from tkinter.font import names
 from venv import create
 
 from django.contrib import admin
-from django.urls import path
-from webapp.views import index_view, task_create_view, task_delete
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_view),
-    path('create/', task_create_view),
-    path('delete/<int:pk>/', task_delete, name='delete'),
+    path('', include('webapp.urls')),
 ]
