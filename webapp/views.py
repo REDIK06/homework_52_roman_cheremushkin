@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from webapp.models import Task
 
@@ -23,3 +23,9 @@ def task_create_view(request):
             date_completion=date_completion if date_completion else None,
         )
         return HttpResponseRedirect('/')
+
+
+def task_delete(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    task.delete()
+    return HttpResponseRedirect('/')
