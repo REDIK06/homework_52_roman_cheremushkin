@@ -1,0 +1,29 @@
+[
+{
+  "model": "webapp.task",
+  "pk": 1,
+  "fields": {
+    "description": "0000000000",
+    "status": "new",
+    "date_completion": null
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 2,
+  "fields": {
+    "description": "qwerty",
+    "status": "in_progress",
+    "date_completion": "2024-12-12"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 3,
+  "fields": {
+    "description": "чрфрўр",
+    "status": "done",
+    "date_completion": "2000-11-19"
+  }
+}
+]
